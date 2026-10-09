@@ -1,363 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="The Reading Room helps readers discover books they will love, from international favorites to Ghanaian literature and children's stories.">
-
-    <title>The Reading Room | Discover Your Next Read</title>
-
-    <!-- Connect the CSS and JavaScript files -->
+    <meta name="description" content="The Reading Room helps readers discover books, explore children's stories, and celebrate Ghanaian literature.">
+    <title>The Reading Room | Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <!-- ================= NAVIGATION ================= -->
     <header class="navbar">
-        <a href="#home" class="logo">
-            The Reading Room<span>.</span>
-        </a>
+        <a href="index.html" class="logo">📚 The Reading Room</a>
 
-        <nav aria-label="Main navigation">
-            <a href="#home">Home</a>
-            <a href="#library">Explore Books</a>
-            <a href="#childrens-corner">Children's Corner</a>
-            <a href="#ghanaian-stories">Ghanaian Stories</a>
-            <a href="#favorites">My Favorites</a>
+        <nav class="nav-links">
+            <a class="active" href="index.html">Home</a>
+            <a href="library.html">Explore Books</a>
+            <a href="children.html">Children's Corner</a>
+            <a href="ghana.html">Stories from Ghana</a>
         </nav>
 
-        <button
-            id="theme-toggle"
-            class="theme-toggle"
-            type="button"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode">
-            🌙
-        </button>
+        <button id="theme-toggle" class="theme-button" aria-label="Toggle dark mode">🌙</button>
     </header>
 
-
     <main>
-
-        <!-- ================= HERO SECTION ================= -->
-        <section id="home" class="hero">
-
+        <section class="hero">
             <div class="hero-content">
-                <p class="eyebrow">
-                    DISCOVER STORIES, CELEBRATE CULTURE
+                <p class="eyebrow">WELCOME TO YOUR HAPPY PLACE</p>
+                <h1>Every reader deserves a <span>story.</span></h1>
+                <p>
+                    Discover your next favourite book, explore magical worlds,
+                    and experience the beauty of stories from Ghana and beyond.
                 </p>
-
-                <h1>
-                    Every reader deserves<br>
-                    a story.
-                </h1>
-
-                <p class="hero-description">
-                    From page-turning novels to childhood favorites
-                    and stories from home, find your next little escape.
-                </p>
-
                 <div class="hero-buttons">
-                    <a href="#library" class="primary-button">
-                        Explore the Library →
-                    </a>
-
-                    <button
-                        id="random-book"
-                        class="secondary-button"
-                        type="button">
-                        ✨ Surprise Me
-                    </button>
+                    <a href="library.html" class="btn btn-primary">Explore Books →</a>
+                    <a href="ghana.html" class="btn btn-secondary">Discover Ghanaian Stories</a>
                 </div>
             </div>
 
             <div class="hero-decoration" aria-hidden="true">
-                <span>📚</span>
-                <p>One more chapter...</p>
+                <span>📖</span>
+                <div class="hero-note">A little reading, a little magic.</div>
             </div>
-
         </section>
 
+        <section class="welcome-section section">
+            <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h2>A room full of possibilities</h2>
+            <p class="section-intro">
+                Whether you love romance, mystery, adventure, or children's
+                stories, there's something waiting for you.
+            </p>
 
-        <!-- ================= BOOK LIBRARY ================= -->
-        <section id="library" class="library-section">
+            <div class="feature-grid">
+                <a href="library.html" class="feature-card">
+                    <span class="feature-icon">📚</span>
+                    <h3>Explore Books</h3>
+                    <p>Browse different genres and find your next great read.</p>
+                    <span class="text-link">Browse the library →</span>
+                </a>
 
+                <a href="children.html" class="feature-card">
+                    <span class="feature-icon">🧸</span>
+                    <h3>Children's Corner</h3>
+                    <p>Discover fun, imaginative stories for young readers.</p>
+                    <span class="text-link">Explore children's books →</span>
+                </a>
+
+                <a href="ghana.html" class="feature-card">
+                    <span class="feature-icon">🇬🇭</span>
+                    <h3>Stories from Ghana</h3>
+                    <p>Celebrate Ghanaian authors, culture, and storytelling.</p>
+                    <span class="text-link">Meet Ghanaian stories →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section featured-section">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">A WORLD OF STORIES</p>
-
-                    <h2>Explore the Library</h2>
-
-                    <p>
-                        Find a story that feels like it was written for you.
-                    </p>
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+                    <h2>Books to fall in love with</h2>
+                    <p class="section-intro">A few stories to get you started.</p>
                 </div>
-
-                <p id="book-count" aria-live="polite">
-                    Discover your next favorite
-                </p>
+                <a href="library.html" class="text-link">View all books →</a>
             </div>
 
-
-            <!-- Search and sorting controls -->
-            <div class="library-controls">
-
-                <label class="search-box">
-                    <span aria-hidden="true">🔎</span>
-
-                    <input
-                        type="search"
-                        id="search-input"
-                        placeholder="Search by title or author..."
-                        aria-label="Search books by title or author">
-                </label>
-
-                <label for="sort-select" class="visually-hidden">
-                    Sort books
-                </label>
-
-                <select id="sort-select">
-                    <option value="default">Sort by: Featured</option>
-                    <option value="title">Title: A–Z</option>
-                    <option value="rating">Highest Rated</option>
-                </select>
-
+            <div id="featured-books" class="book-grid">
+                <p>Loading books...</p>
             </div>
-
-
-            <!-- Genre filters -->
-            <div
-                class="genre-filters"
-                id="genre-filters"
-                aria-label="Filter books by genre">
-
-                <button
-                    class="genre-button active"
-                    type="button"
-                    data-genre="All"
-                    aria-pressed="true">
-                    All Books
-                </button>
-
-                <button
-                    class="genre-button"
-                    type="button"
-                    data-genre="Fiction"
-                    aria-pressed="false">
-                    Fiction
-                </button>
-
-                <button
-                    class="genre-button"
-                    type="button"
-                    data-genre="Romance"
-                    aria-pressed="false">
-                    Romance
-                </button>
-
-                <button
-                    class="genre-button"
-                    type="button"
-                    data-genre="Fantasy"
-                    aria-pressed="false">
-                    Fantasy
-                </button>
-
-                <button
-                    class="genre-button"
-                    type="button"
-                    data-genre="Adventure"
-                    aria-pressed="false">
-                    Adventure
-                </button>
-
-                <button
-                    class="genre-button"
-                    type="button"
-                    data-genre="Mystery"
-                    aria-pressed="false">
-                    Mystery
-                </button>
-
-                <button
-                    class="genre-button"
-                    type="button"
-                    data-genre="Children"
-                    aria-pressed="false">
-                    Children's Books
-                </button>
-
-                <button
-                    class="genre-button"
-                    type="button"
-                    data-genre="Ghanaian"
-                    aria-pressed="false">
-                    Ghanaian Literature
-                </button>
-
-            </div>
-
-
-            <!-- JavaScript will generate the book cards here -->
-            <div
-                id="book-grid"
-                class="book-grid"
-                aria-live="polite">
-
-                <p class="loading-message">
-                    Your books are being arranged...
-                </p>
-
-            </div>
-
-            <!-- Displayed when a search returns no books -->
-            <p id="empty-message" hidden>
-                No books found. Try another search! 📖
-            </p>
-
         </section>
 
-
-        <!-- ================= CHILDREN'S CORNER ================= -->
-        <section
-            id="childrens-corner"
-            class="children-section">
-
-            <p class="eyebrow">
-                SMALL READERS, BIG IMAGINATIONS
-            </p>
-
-            <h2>
-                A Little Magic for Little Readers 🧸
-            </h2>
-
-            <p>
-                From silly adventures to timeless tales,
-                there's a story for every curious mind.
-            </p>
-
-            <a
-                href="#library"
-                class="primary-button"
-                id="children-link">
-                Explore Children's Books →
-            </a>
-
+        <section class="quote-section">
+            <span class="quote-mark">“</span>
+            <blockquote>
+                A book is a dream that you hold in your hands.
+            </blockquote>
+            <p>— Neil Gaiman</p>
         </section>
 
-
-        <!-- ================= GHANAIAN STORIES ================= -->
-        <section
-            id="ghanaian-stories"
-            class="ghanaian-section">
-
-            <p class="eyebrow">
-                STORIES FROM HOME
-            </p>
-
-            <h2>
-                Discover Ghanaian Literature 🇬🇭
-            </h2>
-
-            <p>
-                Explore stories from Ghanaian and African authors,
-                celebrate our literary heritage, and discover
-                perspectives from closer to home.
-            </p>
-
-            <a
-                href="#library"
-                class="primary-button"
-                id="ghanaian-link">
-                Explore Ghanaian Books →
-            </a>
-
-        </section>
-
-
-        <!-- ================= FAVORITES ================= -->
-        <section
-            id="favorites"
-            class="favorites-section">
-
+        <section class="section favorites-section">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">
-                        KEPT CLOSE TO YOUR HEART
-                    </p>
-
-                    <h2>
-                        My Favorites <span>♥</span>
-                    </h2>
-
-                    <p>
-                        The stories you want to return to.
-                    </p>
+                    <p class="eyebrow">SAVED WITH LOVE</p>
+                    <h2>Your favourite books</h2>
+                    <p class="section-intro">Keep the stories you want to read close.</p>
                 </div>
+                <a href="library.html" class="text-link">Find more books →</a>
             </div>
 
-            <!-- JavaScript will display saved favorites here -->
-            <div
-                id="favorites-grid"
-                class="book-grid"
-                aria-live="polite">
-
-                <p>
-                    Your favorite books will appear here. 🤎
-                </p>
-
-            </div>
-
+            <div id="favorites-grid" class="book-grid"></div>
+            <p id="favorites-empty" class="empty-message">
+                You haven't saved any favourites yet. Tap the ♡ on a book to add it here!
+            </p>
         </section>
-
     </main>
 
-
-    <!-- ================= BOOK DETAILS POPUP ================= -->
-    <dialog
-        id="book-modal"
-        class="book-modal"
-        aria-labelledby="modal-title">
-
-        <button
-            id="close-modal"
-            class="close-modal"
-            type="button"
-            aria-label="Close book details">
-            ✕
-        </button>
-
-        <!-- JavaScript will insert the selected book's details here -->
-        <div id="modal-content"></div>
-
-    </dialog>
-
-
-    <!-- ================= FOOTER ================= -->
     <footer class="footer">
-
-        <a href="#home" class="logo">
-            The Reading Room<span>.</span>
-        </a>
-
-        <p>
-            Made with ♡ for the love of stories.
-        </p>
-
-        <p>
-            Celebrating readers and stories in Ghana and beyond. 🇬🇭
-        </p>
-
-        <p>
-            &copy; 2026 The Reading Room
-        </p>
-
+        <a href="index.html" class="logo">📚 The Reading Room</a>
+        <p>Made for curious minds and book-loving hearts. 💚</p>
+        <p class="copyright">© 2026 The Reading Room</p>
     </footer>
 
+    <dialog id="book-modal" class="book-modal">
+        <button id="close-modal" class="close-modal" aria-label="Close book details">✕</button>
+        <div id="modal-content"></div>
+    </dialog>
 </body>
 </html>

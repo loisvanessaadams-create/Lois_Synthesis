@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Books | The Reading Room</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">📚 The Reading Room</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="library.html">Explore Books</a>
+            <a href="children.html">Children's Corner</a>
+            <a href="ghana.html">Stories from Ghana</a>
+        </nav>
+        <button id="theme-toggle" class="theme-button" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <p class="eyebrow">FIND YOUR NEXT ADVENTURE</p>
+            <h1>Explore the library 📚</h1>
+            <p>Search, discover, and save the books that speak to you.</p>
+        </section>
+
+        <section class="section library-section">
+            <label for="search-input">Search by title or author</label>
+            <input id="search-input" type="search" placeholder="Try 'Wonder' or 'Ama Ata Aidoo'">
+
+            <div class="filter-row">
+                <div>
+                    <label for="genre-filter">Genre</label>
+                    <select id="genre-filter">
+                        <option value="all">All genres</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="romance">Romance</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="mystery">Mystery</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sort-select">Sort by</label>
+                    <select id="sort-select">
+                        <option value="title">Title (A–Z)</option>
+                        <option value="rating">Rating (highest first)</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="results-count" class="results-count"></p>
+            <div id="book-grid" class="book-grid"></div>
+            <p id="no-results" class="empty-message hidden">
+                No books found. Try another search or genre.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">📚 The Reading Room</a>
+        <p>Every reader deserves a story. 💚</p>
+        <p class="copyright">© 2026 The Reading Room</p>
+    </footer>
+
+    <dialog id="book-modal" class="book-modal">
+        <button id="close-modal" class="close-modal" aria-label="Close book details">✕</button>
+        <div id="modal-content"></div>
+    </dialog>
+</body>
+</html>
