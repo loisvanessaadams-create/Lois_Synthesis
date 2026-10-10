@@ -684,3 +684,368 @@ body.dark-mode .ghana-message {
         height: 230px;
     }
 }
+
+/* ==========================================
+   STORIES FROM GHANA
+   ========================================== */
+
+.ghana-categories {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.ghana-category {
+    padding: 28px 22px;
+    background: var(--paper);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ghana-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.ghana-icon {
+    display: block;
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+}
+
+.ghana-category h3 {
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.ghana-category p {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.ghana-message {
+    margin: 20px 8% 60px;
+    padding: 45px 30px;
+    background: #e8eddf;
+    color: #234c3b;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.ghana-message h2,
+.ghana-message h3,
+.ghana-message p {
+    color: #234c3b;
+    opacity: 1;
+}
+
+.ghana-message p {
+    max-width: 750px;
+    margin: 15px auto 0;
+    line-height: 1.9;
+}
+
+.ghana-cta {
+    text-align: center;
+}
+
+/* ==========================================
+   HOME PAGE RECOMMENDATION QUIZ
+   ========================================== */
+
+.reading-quiz {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 35px;
+    background: #f5f0e4;
+    color: #294536;
+    border-radius: 16px;
+}
+
+.reading-quiz h2 {
+    margin-bottom: 12px;
+    color: #294536;
+}
+
+.reading-quiz h3,
+.reading-quiz p,
+.reading-quiz label,
+#recommendation-results {
+    color: #294536;
+    opacity: 1;
+}
+
+.reading-quiz .eyebrow {
+    color: #94652f;
+}
+
+#recommendation-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.quiz-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quiz-field label {
+    font-weight: 600;
+}
+
+.quiz-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8d0c0;
+    border-radius: 8px;
+    background: #fffdf8;
+    color: #263b30;
+}
+
+#recommendation-form button {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+#recommendation-results:not(:empty) {
+    margin-top: 24px;
+}
+
+#recommendation-results .book-card {
+    background: #fffdf8;
+    color: #294536;
+}
+
+#recommendation-results .book-card h3,
+#recommendation-results .book-card p {
+    color: #294536;
+}
+
+#recommendation-results .book-author,
+#recommendation-results .book-rating span {
+    color: #66766b;
+}
+
+#surprise-button {
+    margin-top: 16px;
+}
+
+.hero-subtitle {
+    margin-top: 22px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* ==========================================
+   EXPLORE BOOKS PAGE
+   ========================================== */
+
+.library-search {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.library-search label,
+.filter-row label {
+    font-weight: 600;
+}
+
+.library-search input,
+.filter-row select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8d0c0;
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--text);
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.filter-row > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.library-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.library-note {
+    text-align: center;
+    background: #f5f0e4;
+    color: #294536;
+    border-radius: 14px;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.library-note p {
+    max-width: 650px;
+    margin: 12px auto 0;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+
+body.dark-mode .ghana-category {
+    background: var(--paper);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark-mode .ghana-category h3,
+body.dark-mode .ghana-category p {
+    color: var(--text);
+}
+
+body.dark-mode .ghana-message {
+    background: #2f4234;
+    color: #f5f0e5;
+}
+
+body.dark-mode .ghana-message h2,
+body.dark-mode .ghana-message h3,
+body.dark-mode .ghana-message p {
+    color: #f5f0e5;
+    opacity: 1;
+}
+
+body.dark-mode .reading-quiz {
+    background: #223027;
+    color: #f0eee6;
+}
+
+body.dark-mode .reading-quiz h2,
+body.dark-mode .reading-quiz h3,
+body.dark-mode .reading-quiz p,
+body.dark-mode .reading-quiz label,
+body.dark-mode #recommendation-results {
+    color: #f0eee6;
+    opacity: 1;
+}
+
+body.dark-mode .reading-quiz .eyebrow {
+    color: #e3bd8e;
+}
+
+body.dark-mode .quiz-field select {
+    background: #17221b;
+    color: #f0eee6;
+    border-color: #657568;
+}
+
+body.dark-mode #recommendation-results .book-card {
+    background: #2f4234;
+    color: #f0eee6;
+}
+
+body.dark-mode #recommendation-results .book-card h3,
+body.dark-mode #recommendation-results .book-card p {
+    color: #f0eee6;
+}
+
+body.dark-mode #recommendation-results .book-author,
+body.dark-mode #recommendation-results .book-rating span {
+    color: #d0d9ce;
+}
+
+body.dark-mode .library-note {
+    background: #223027;
+    color: #f0eee6;
+}
+
+/* ==========================================
+   ACCESSIBILITY AND RESPONSIVE LAYOUT
+   ========================================== */
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .ghana-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .ghana-message {
+        margin: 10px 20px 40px;
+        padding: 32px 20px;
+    }
+
+    #recommendation-form {
+        grid-template-columns: 1fr;
+    }
+
+    #recommendation-form button {
+        grid-column: auto;
+        justify-self: stretch;
+    }
+
+    .reading-quiz {
+        margin: 20px;
+        padding: 24px 20px;
+    }
+
+    .filter-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ghanaian author spotlight */
+.author-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.author-card {
+    padding: 24px;
+    background: var(--paper);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.author-card h3 {
+    color: var(--green);
+}
+
+.author-card p {
+    line-height: 1.7;
+}
+
+.author-book {
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+    .author-grid {
+        grid-template-columns: 1fr;
+    }
+}

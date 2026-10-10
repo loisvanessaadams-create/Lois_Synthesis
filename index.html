@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Reading Room helps readers discover books, explore children's stories, and celebrate Ghanaian literature.">
+    <meta name="description" content="Discover your next favourite book, explore children's stories, and celebrate Ghanaian literature at The Reading Room.">
     <title>The Reading Room | Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -12,40 +12,54 @@
     <header class="navbar">
         <a href="index.html" class="logo">📚 The Reading Room</a>
 
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Main navigation">
             <a class="active" href="index.html">Home</a>
             <a href="library.html">Explore Books</a>
             <a href="children.html">Children's Corner</a>
             <a href="ghana.html">Stories from Ghana</a>
         </nav>
 
-        <button id="theme-toggle" class="theme-button" aria-label="Toggle dark mode">🌙</button>
+        <button id="theme-toggle" class="theme-button"
+                type="button" aria-label="Toggle dark mode">🌙</button>
     </header>
 
     <main>
+        <!-- Hero section -->
         <section class="hero">
             <div class="hero-content">
                 <p class="eyebrow">WELCOME TO YOUR HAPPY PLACE</p>
                 <h1>Every reader deserves a <span>story.</span></h1>
+
                 <p>
                     Discover your next favourite book, explore magical worlds,
                     and experience the beauty of stories from Ghana and beyond.
                 </p>
+
                 <div class="hero-buttons">
-                    <a href="library.html" class="btn btn-primary">Explore Books →</a>
-                    <a href="ghana.html" class="btn btn-secondary">Discover Ghanaian Stories</a>
+                    <a href="library.html" class="btn btn-primary">
+                        Explore Books →
+                    </a>
+                    <a href="ghana.html" class="btn btn-secondary">
+                        Discover Ghanaian Stories
+                    </a>
                 </div>
+
+                <p class="hero-subtitle">
+                    ✨ A little reading, a little magic.
+                </p>
             </div>
 
             <div class="hero-decoration" aria-hidden="true">
                 <span>📖</span>
-                <div class="hero-note">A little reading, a little magic.</div>
+                <div class="hero-note">Your next chapter starts here.</div>
             </div>
         </section>
 
+        <!-- Main destinations -->
         <section class="welcome-section section">
             <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
             <h2>A room full of possibilities</h2>
+
             <p class="section-intro">
                 Whether you love romance, mystery, adventure, or children's
                 stories, there's something waiting for you.
@@ -55,34 +69,46 @@
                 <a href="library.html" class="feature-card">
                     <span class="feature-icon">📚</span>
                     <h3>Explore Books</h3>
-                    <p>Browse different genres and find your next great read.</p>
+                    <p>
+                        Browse different genres and find your next great read.
+                    </p>
                     <span class="text-link">Browse the library →</span>
                 </a>
 
                 <a href="children.html" class="feature-card">
                     <span class="feature-icon">🧸</span>
                     <h3>Children's Corner</h3>
-                    <p>Discover fun, imaginative stories for young readers.</p>
+                    <p>
+                        Discover fun, imaginative stories for young readers.
+                    </p>
                     <span class="text-link">Explore children's books →</span>
                 </a>
 
                 <a href="ghana.html" class="feature-card">
                     <span class="feature-icon">🇬🇭</span>
                     <h3>Stories from Ghana</h3>
-                    <p>Celebrate Ghanaian authors, culture, and storytelling.</p>
+                    <p>
+                        Celebrate Ghanaian authors, culture, and storytelling.
+                    </p>
                     <span class="text-link">Meet Ghanaian stories →</span>
                 </a>
             </div>
         </section>
 
+        <!-- Featured collection -->
         <section class="section featured-section">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">HANDPICKED FOR YOU</p>
                     <h2>Books to fall in love with</h2>
-                    <p class="section-intro">A few stories to get you started.</p>
+                    <p class="section-intro">
+                        A few stories to get your reading journey started.
+                    </p>
                 </div>
-                <a href="library.html" class="text-link">View all books →</a>
+
+                <a href="library.html" class="text-link">
+                    View all books →
+                </a>
             </div>
 
             <div id="featured-books" class="book-grid">
@@ -90,6 +116,70 @@
             </div>
         </section>
 
+        <!-- Reading recommendation quiz -->
+        <section class="section reading-quiz">
+            <p class="eyebrow">LET'S FIND YOUR NEXT READ</p>
+            <h2>What should you read next? ✨</h2>
+
+            <p class="section-intro">
+                Tell us what you're in the mood for, and we'll suggest
+                books from our collection.
+            </p>
+
+            <form id="recommendation-form">
+                <div class="quiz-field">
+                    <label for="quiz-audience">Who's reading?</label>
+                    <select id="quiz-audience" name="audience">
+                        <option value="any">Anyone / no preference</option>
+                        <option value="children">Children</option>
+                        <option value="teen">Teens and young adults</option>
+                        <option value="adult">Adults</option>
+                    </select>
+                </div>
+
+                <div class="quiz-field">
+                    <label for="quiz-mood">What's your mood?</label>
+                    <select id="quiz-mood" name="mood">
+                        <option value="any">Surprise me</option>
+                        <option value="funny">Something funny</option>
+                        <option value="adventure">Adventure and excitement</option>
+                        <option value="mystery">Mystery and suspense</option>
+                        <option value="comfort">Warm and comforting</option>
+                        <option value="thoughtful">Thought-provoking</option>
+                        <option value="romance">Love and relationships</option>
+                        <option value="ghana">Ghanaian stories</option>
+                    </select>
+                </div>
+
+                <div class="quiz-field">
+                    <label for="quiz-genre">Choose a genre</label>
+                    <select id="quiz-genre" name="genre">
+                        <option value="any">Any genre</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Contemporary">Contemporary</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Children's">Children's</option>
+                        <option value="Ghanaian Literature">Ghanaian literature</option>
+                        <option value="Folktale">Folktales</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Find my next read →
+                </button>
+            </form>
+
+            <div id="recommendation-results" aria-live="polite"></div>
+
+            <button id="surprise-button" class="btn btn-secondary"
+                    type="button">
+                🎲 Surprise me with a book!
+            </button>
+        </section>
+
+        <!-- Quote -->
         <section class="quote-section">
             <span class="quote-mark">“</span>
             <blockquote>
@@ -98,19 +188,27 @@
             <p>— Neil Gaiman</p>
         </section>
 
+        <!-- Favourites -->
         <section class="section favorites-section">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">SAVED WITH LOVE</p>
-                    <h2>Your favourite books</h2>
-                    <p class="section-intro">Keep the stories you want to read close.</p>
+                    <h2>Your favourite books ♡</h2>
+                    <p class="section-intro">
+                        Keep the stories you want to read close.
+                    </p>
                 </div>
-                <a href="library.html" class="text-link">Find more books →</a>
+
+                <a href="library.html" class="text-link">
+                    Find more books →
+                </a>
             </div>
 
             <div id="favorites-grid" class="book-grid"></div>
+
             <p id="favorites-empty" class="empty-message">
-                You haven't saved any favourites yet. Tap the ♡ on a book to add it here!
+                You haven't saved any favourites yet.
+                Tap the ♡ on a book to add it here!
             </p>
         </section>
     </main>
@@ -118,11 +216,20 @@
     <footer class="footer">
         <a href="index.html" class="logo">📚 The Reading Room</a>
         <p>Made for curious minds and book-loving hearts. 💚</p>
+
+        <div class="footer-links">
+            <a href="library.html">Explore Books</a>
+            <a href="children.html">Children's Corner</a>
+            <a href="ghana.html">Stories from Ghana</a>
+        </div>
+
         <p class="copyright">© 2026 The Reading Room</p>
     </footer>
 
+    <!-- Book details modal -->
     <dialog id="book-modal" class="book-modal">
-        <button id="close-modal" class="close-modal" aria-label="Close book details">✕</button>
+        <button id="close-modal" class="close-modal"
+                type="button" aria-label="Close book details">✕</button>
         <div id="modal-content"></div>
     </dialog>
 </body>
