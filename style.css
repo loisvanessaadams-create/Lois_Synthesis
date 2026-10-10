@@ -685,9 +685,7 @@ body.dark-mode .ghana-message {
     }
 }
 
-/* ==========================================
-   STORIES FROM GHANA
-   ========================================== */
+/*STORIES FROM GHANA*/
 
 .ghana-categories {
     display: grid;
@@ -752,9 +750,7 @@ body.dark-mode .ghana-message {
     text-align: center;
 }
 
-/* ==========================================
-   HOME PAGE RECOMMENDATION QUIZ
-   ========================================== */
+/*HOME PAGE RECOMMENDATION QUIZ*/
 
 .reading-quiz {
     max-width: 1100px;
@@ -842,9 +838,7 @@ body.dark-mode .ghana-message {
     opacity: 0.85;
 }
 
-/* ==========================================
-   EXPLORE BOOKS PAGE
-   ========================================== */
+/* EXPLORE BOOKS PAGE */
 
 .library-search {
     display: flex;
@@ -902,9 +896,8 @@ body.dark-mode .ghana-message {
     line-height: 1.8;
 }
 
-/* ==========================================
-   DARK MODE
-   ========================================== */
+/*DARK MODE*/
+
 
 body.dark-mode .ghana-category {
     background: var(--paper);
@@ -973,9 +966,7 @@ body.dark-mode .library-note {
     color: #f0eee6;
 }
 
-/* ==========================================
-   ACCESSIBILITY AND RESPONSIVE LAYOUT
-   ========================================== */
+/* ACCESSIBILITY AND RESPONSIVE LAYOUT*/
 
 button:focus-visible,
 a:focus-visible,

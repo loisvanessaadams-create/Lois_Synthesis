@@ -20,6 +20,7 @@ const books = [
         audience: "Adult",
         rating: 4.3,
         isbn: "9780593653165",
+        image: "atmosphere.jpg",
         ghanaian: false,
         description: "A story of ambition, love, and women reaching for the stars in the world of space exploration."
     },
@@ -336,9 +337,7 @@ const books = [
 
 ];
 
-// ==========================================
 // HELPER FUNCTIONS
-// ==========================================
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -382,27 +381,13 @@ function coverURL(book) {
     return `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(book.isbn)}-L.jpg`;
 }
 
-function retailerLinks(book) {
-    const query = encodeURIComponent(`${book.title} ${book.author}`);
-    const amazonQuery = encodeURIComponent(book.isbn || `${book.title} ${book.author}`);
 
-    return `
-        <div class="retailer-links">
-            <a href="https://www.goodreads.com/search?q=${query}"
-               target="_blank" rel="noopener noreferrer">
-                Find on Goodreads ↗
-            </a>
-            <a href="https://www.amazon.com/s?k=${amazonQuery}"
-               target="_blank" rel="noopener noreferrer">
-                Find on Amazon ↗
-            </a>
-        </div>
-    `;
+function retailerLinks(book) {
+    return "";
 }
 
-// ==========================================
 // BOOK CARDS
-// ==========================================
+
 
 function createBookCard(book) {
     const isFavorite = getFavorites().includes(book.id);
@@ -500,9 +485,8 @@ function toggleFavorite(id) {
     refreshPageBooks();
 }
 
-// ==========================================
 // LIBRARY FILTERS AND SORTING
-// ==========================================
+
 
 
 function filterLibrary() {
@@ -627,9 +611,8 @@ function refreshPageBooks() {
     filterLibrary();
 }
 
-// ==========================================
 // BOOK DETAILS MODAL
-// ==========================================
+
 
 function showBookDetails(id) {
     const book = books.find(item => item.id === Number(id));
@@ -691,9 +674,8 @@ function showBookDetails(id) {
     }
 }
 
-// ==========================================
 // DARK MODE
-// ==========================================
+
 
 function setupDarkMode() {
     const themeButton = $("#theme-toggle");
@@ -737,10 +719,7 @@ function setupDarkMode() {
     });
 }
 
-// ==========================================
 // RECOMMENDATION QUIZ
-// ==========================================
-
 
 function setupRecommendationQuiz() {
     const form = $("#recommendation-form");
@@ -822,9 +801,7 @@ function setupSurpriseButton() {
     });
 }
 
-// ==========================================
 // EVENT LISTENERS
-// ==========================================
 
 function setupEvents() {
     document.addEventListener("click", event => {
