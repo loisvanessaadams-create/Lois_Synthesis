@@ -53,6 +53,7 @@ const books = [
         audience: "Adult",
         rating: 4.1,
         isbn: "9780593441190",
+        image : "Funny Story.jpg",
         ghanaian: false,
         description: "Two people with broken hearts become unlikely housemates and find their lives taking an unexpected turn."
     },
@@ -375,6 +376,7 @@ function saveFavorites(favorites) {
 }
 
 function coverURL(book) {
+    if(book.image) return book.image;
     if (!book.isbn) return "";
 
     return `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(book.isbn)}-L.jpg`;
@@ -908,9 +910,8 @@ function setupEvents() {
     }
 }
 
-// ==========================================
 // START THE WEBSITE
-// ==========================================
+
 
 document.addEventListener("DOMContentLoaded", () => {
     setupDarkMode();
